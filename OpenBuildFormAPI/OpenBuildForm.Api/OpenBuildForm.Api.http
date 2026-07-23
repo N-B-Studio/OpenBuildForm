@@ -1,6 +1,19 @@
-@OpenBuildForm.Api_HostAddress = http://localhost:5076
+@host = https://localhost:7253
 
-GET {{OpenBuildForm.Api_HostAddress}}/weatherforecast/
+### Get all templates
+
+GET {{host}}/api/templates
 Accept: application/json
 
-###
+
+### Create template
+
+POST {{host}}/api/templates
+Content-Type: application/json
+
+{
+  "ownerUserId": "12311111-1111-1111-1111-111111111111",
+  "name": "Haircut Booking",
+  "slug": "haircut-booking",
+  "description": "My first OpenBuildForm template"
+}
